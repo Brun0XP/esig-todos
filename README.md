@@ -1,7 +1,7 @@
 # ESIG Todos
 Site: https://esig-todos.herokuapp.com/
 
-## Tecnológias utilizadas
+### Tecnológias utilizadas
 
 - JSF 2.2.14
 - Bootstrap 4.5.3
@@ -9,27 +9,27 @@ Site: https://esig-todos.herokuapp.com/
 - PostgreSQL 42.2.18
 - Lombok 1.18.16
 
-### Itens complementados 
+#### Itens complementados 
 
 - A, B, F, G, J
 
-## Sobre
+### Sobre
 
 O ESIG Todos foi feito usando JavaServer Faces com flameworks como o primefaces e Boostrap 4
 para deixar o app mais agradável, usa o PostgreSQL como persistencia de dados e autenticação 
-por IP para filtrar os todos 
+por IP para filtrar os todos criados.
 
-## Editar código localmente
+### Editar código localmente
 
 - Para editar o código em seu computador utilize o plugin do lombok disponível no marketplace da IDE escolhida
 
-## Requisitos para execução
+### Requisitos para execução
 
 - Configurar um banco de dados utilizando PostgreSQL
 - Configure as variáveis na classe ConnectionFactory `URL, USERNAME, PASSWORD`
 
-## Execução local
+### Execução local
 
-- Para gerar uma jar executável utilize o comando do maven `$ mvn clean install`
-- Para executar a jar gerada utilize no cmd  `$ java -jar tarefa.jar`
+- Para gerar uma a war utilize o comando do maven `$ mvn clean install`
+- Faça deploy da war para o web server java.
 
