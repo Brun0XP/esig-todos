@@ -23,7 +23,13 @@ por IP para filtrar os todos
 
 - Para editar o código em seu computador utilize o plugin do lombok disponível no marketplace da IDE escolhida
 
+## Requisitos para execução
+
+- Configurar um banco de dados utilizando PostgreSQL
+- Configure as variáveis na classe ConnectionFactory `URL, USERNAME, PASSWORD`
+
 ## Execução local
 
 - Para gerar uma jar executável utilize o comando do maven `$ mvn clean install`
 - Para executar a jar gerada utilize no cmd  `$ java -jar tarefa.jar`
+

@@ -49,9 +49,10 @@ public class TodoBean extends CrudBean<Todo, TodoDAO> {
         super.read();
 
         String finalIpAddress = ipAddress;
-        setEntities(getEntities().stream().filter(todo -> todo.getIp().equals(finalIpAddress)).collect(Collectors.toList()));
+        setEntities(getEntities().stream().filter(todo ->
+                todo.getIp().equals(finalIpAddress)
+        ).collect(Collectors.toList()));
     }
-
 
     @Override
     public Todo createNewEntity() {

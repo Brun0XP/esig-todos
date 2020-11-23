@@ -13,27 +13,20 @@ public class ConnectionFactory {
     private static final String USERNAME = "soimlmqgwipnqj";
     private static final String PASSWORD = "f0ada4d1b09fb93402331e0dff3391670fd35550f19c8b33acc366619f54cfc6";
 
+    @SneakyThrows
     public static Connection getConnection() {
         if (connection == null) {
-            try {
-                Class.forName("org.postgresql.Driver");
-                connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-
-            } catch (ClassNotFoundException | SQLException e) {
-                e.printStackTrace();
-            }
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         }
 
         return connection;
     }
 
+    @SneakyThrows
     public static void closeConnection() {
         if (connection != null) {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            connection.close();
             connection = null;
         }
     }

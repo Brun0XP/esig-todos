@@ -19,7 +19,7 @@ public abstract class CrudBean<T, D extends CrudDAO> {
     public void save() {
         getDAO().create(entity);
         entity = createNewEntity();
-        addMessage("Criado com sucesso!", FacesMessage.SEVERITY_INFO);
+        addMessage("SUCESSO!", "A tarefa foi criada!", FacesMessage.SEVERITY_INFO);
     }
 
     public void update(T entity) {
@@ -29,7 +29,7 @@ public abstract class CrudBean<T, D extends CrudDAO> {
     public void delete(T entity) {
         getDAO().delete(entity);
         entities.remove(entity);
-        addMessage("Deletado com sucesso", FacesMessage.SEVERITY_INFO);
+        addMessage("SUCESSO!", "A tarefa foi deletada!", FacesMessage.SEVERITY_INFO);
     }
 
     public void read() {
@@ -40,8 +40,12 @@ public abstract class CrudBean<T, D extends CrudDAO> {
     }
 
 
-    public void addMessage(String message, FacesMessage.Severity errorType) {
-        FacesMessage facesMessage = new FacesMessage(errorType, message, null);
+    public void addMessage(String summary, FacesMessage.Severity errorType) {
+        addMessage(summary, null, errorType);
+    }
+
+    public void addMessage(String summary, String detail, FacesMessage.Severity errorType) {
+        FacesMessage facesMessage = new FacesMessage(errorType, summary, detail);
         FacesContext.getCurrentInstance().addMessage(null, facesMessage);
     }
 
