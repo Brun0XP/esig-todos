@@ -1,0 +1,54 @@
+.container{
+    margin-top: 40px;
+    width: 600px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.ui-datalist-content {
+    padding: 0px !important;
+    border: none;
+}
+
+ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.ui-inplace-display {
+    padding: 0px !important;
+    margin: 0px 10px !important;
+    max-width: 450px !important;
+}
+
+.todo-checkbox {
+
+}
+
+.todo-delete {
+    float: right;
+}
+
+.todo-delete:hover i{
+    color: #d14343;
+}
+
+.todo-delete i {
+    font-size: 20px;
+}
+
+
+.todo-item .todo-delete {
+    display: none;
+}
+
+li:hover .todo-delete {
+    display: block;
+}
+
+.clear-button {
+    float: right;
+}

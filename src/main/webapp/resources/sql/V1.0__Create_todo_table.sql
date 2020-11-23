@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS todos(
+    id SERIAL PRIMARY KEY,
+    ip VARCHAR(16) NOT NULL,
+    description TEXT NOT NULL,
+    done BOOLEAN NOT NULL DEFAULT 'false'
+)
